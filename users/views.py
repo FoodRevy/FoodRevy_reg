@@ -4,14 +4,14 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import UserRegisterForm
-
+from django.views.csrf.decorators import csrf_exempt
 
 # Create your views here.
 
 def home(request):
     return render(request, "users/index.html")
 
-
+@csrf_exempt
 def signup(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
