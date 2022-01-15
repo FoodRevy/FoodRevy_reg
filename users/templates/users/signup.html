@@ -55,7 +55,9 @@
 
             <div style="">
                 <form method="POST" action="{% url 'signup' %}">
+
                     {% csrf_token %}
+
                     {% for field in form %}
                     <p>
                     <div class="form-floating">
