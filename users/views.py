@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import UserRegisterForm
-from django.views.csrf.decorators import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
